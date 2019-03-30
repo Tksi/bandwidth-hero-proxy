@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "name": "bandwidth-hero-proxy",
+  "regions": [
+    "hnd1"
+  ],
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@now/node",
+      "config": {
+        "maxLambdaSize": "20mb"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/server.js"
+    }
+  ]
+}
